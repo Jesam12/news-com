@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Row, Col, Nav, Form, FormControl, Button, Dropdown, Navbar, Container} from "react-bootstrap";
 import './App.css'
 
 function App() {
@@ -8,9 +7,9 @@ function App() {
 
   return (
     <>
-      <div>
-        
-      </div>
+      <Navbar bg='light' expand="lg" className='mb-4'>
+
+      </Navbar>
     </>
   )
 }
