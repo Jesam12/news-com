@@ -26,6 +26,12 @@ function App() {
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>
+
+            <Form className='d-flex'>
+              <FormControl type="text" placeholder='search' className='me-2' name='search'/>
+
+              <Button variant='outline-primary' type='submit'>Search</Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
