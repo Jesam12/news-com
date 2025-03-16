@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import { Row, Col, Nav, Form, FormControl, Button, Dropdown, Navbar, Container} from "react-bootstrap";
 import './App.css'
+import NewsList from './Components/NewsList';
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const [category, setCategory] = useState("")
+  const [searchTerm, setSearchTerm] = useState("")
 
   return (
     <>
@@ -50,7 +54,7 @@ function App() {
           </Col>
 
           <Col xs={12} md={9}>
-           News
+           <NewsList category={category} searchTerm={searchTerm}/>
           </Col>
         </Row>
       </Container>
