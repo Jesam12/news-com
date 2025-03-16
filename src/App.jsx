@@ -6,8 +6,13 @@ import NewsList from './Components/NewsList';
 function App() {
   const [count, setCount] = useState(0)
 
-  const [category, setCategory] = useState("")
-  const [searchTerm, setSearchTerm] = useState("")
+  const [category, setCategory] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleCategoryClick = (category) => {
+    setCategory(category);
+    setSearchTerm("");
+  }
 
   return (
     <>
@@ -22,11 +27,11 @@ function App() {
               <Dropdown>
                 <Dropdown.Toggle variant='outline-primary'>Categories</Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item>World</Dropdown.Item>
-                  <Dropdown.Item>Business</Dropdown.Item>
-                  <Dropdown.Item>Technology</Dropdown.Item>
-                  <Dropdown.Item>Sport</Dropdown.Item>
-                  <Dropdown.Item>Entertainment</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("world")}>World</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("business")}>Business</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("technology")}>Technology</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("sports")}>Sport</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("entertainment")}>Entertainment</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>
