@@ -31,18 +31,18 @@ const NewsList = (props) => {
             setNews(data.articles)
         }
         fetchNews()
-    })
+    }, [searchTerm, category]);
   return (
     <Container>
         <Row>
-            {news.map [(article) => {
+            {news?.map [(article) => {
                 <Col xs={12} md={6} lg={4} key={article.url}>
                     <Card>
                         <Card.Img src={article.image} variant="top"/>
                         <CardBody>
                             <Card.Title>{article.Title}</Card.Title>
-                            <Card.Text></Card.Text>
-                            <Card.Link></Card.Link>
+                            <Card.Text>{article.description}</Card.Text>
+                            <Card.Link href={article.url}>Read More</Card.Link>
                         </CardBody>
                     </Card>
                 </Col>
